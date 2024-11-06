@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+    <header>
+        <title>Collecting Thanksgiving Recipes</title>
+    </header>
+    <body>
+        <h1>Collecting Thanksgiving Recipes</h1>
+
+        <!--Text input-->
+        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html" method="post">
+            <p>Recipe Name:
+                <input type="text" name="recipe" size="15"
+                maxlength="30" />
+            </p>
+        </form>
+
+        <!--Enter ingredients and quantities-->
+        <!--Text input ingredient; text input quantity; drop down units-->
+        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html">
+            <p>Ingredient:
+                <input type="text" name="ingredient" size="15"
+                maxlength="30" />
+                Quantity:
+                <input type="text" name="quantity" size="15"
+                maxlength="30" />
+                Unit Measurement:
+                <select name="List">
+                    <option value="lbs">lbs</option>
+                    <option value="teaspoon 2">tsp</option>
+                    <option value="tablespoon 3">tsb</option>
+                    <option value="tablespoon 3">cups</option>
+                </select>
+            </p>
+        </form>
+
+        <!--Checklist of Ingredients-->
+        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html">
+            <p>Checklist of ingredients:</p>
+            <input type="checklist" name="echcliecmail" />
+            <input type="email" value="submit" />
+        </form>
+
+        
+        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html">
+            <button id="add" onclick="add()">Add Ingredient</button>
+            <input type="hidden" name="name" value="value" />
+        </form>
+        
+
+
+
+        <script src="js/index.js"></script>
+    </body>
+</html>

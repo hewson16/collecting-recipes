@@ -13,40 +13,44 @@
             </p>
         </form>
 
-        <!--Enter ingredients and quantities-->
-        <!--Text input ingredient; text input quantity; drop down units-->
-        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html">
-            <p>Ingredient:
-                <input type="text" name="ingredient" size="15"
-                maxlength="30" />
-                Quantity:
-                <input type="text" name="quantity" size="15"
-                maxlength="30" />
-                Unit Measurement:
-                <select name="List">
-                    <option value="lbs">lbs</option>
-                    <option value="teaspoon 2">tsp</option>
-                    <option value="tablespoon 3">tsb</option>
-                    <option value="tablespoon 3">cups</option>
-                </select>
-            </p>
+        <form id="ingredientForm" onclick="addIngredient()"> <!--onsubmit to prevent submitting too early-->
+            <!--Ingredient-->
+            <label for="ingredientInput">Ingredient:</label>
+            <input type="text" id="ingredientInput" name="ingredientInput">
+            <!--Quantity-->
+            <label for="quantityInput">Quantity:</label>
+            <input type="text" id="quantityInput" name="quantityInput">
+            <!--Units-->
+            <label for="unitMeasurement">Unit Measurement:</label>
+            <select id="unitMeasurement" name="unitMeasurement">
+                <!--No Specific Unit-->
+                <option value=" "> </option> <!--Blank space incase for whole quantities-->
+                <!--Volume-->
+                <option value="tsp">tsp</option> <!--Teaspoon-->
+                <option value="tbsp">tbsp</option> <!--Tablespoon-->
+                <option value="cup">cup</option> <!--Cup-->
+                <option value="ml">ml</option> <!--Milliliter-->
+                <option value="fl oz">fl oz</option> <!--Fluid Ounce-->
+                <!--Weight-->                
+                <option value="g">g</option> <!--Grams-->
+                <option value="kg">kg</option> <!--Kilograms-->
+                <option value="oz">oz</option> <!--Ounce-->
+                <option value="lbs">lbs</option> <!--Pounds-->
+            </select>
+            <!--Submit Ingredient-->
+            <button id="submit">Add Ingredient</button>
         </form>
+    
+        <!-- Display ingredient list with checkboxes -->
+        
 
         <!--Checklist of Ingredients-->
         <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html">
-            <p>Checklist of ingredients:</p>
-            <input type="checklist" name="echcliecmail" />
-            <input type="email" value="submit" />
+            <p id="ingredientList">Checklist of Ingredients</p>
+            
+
+            <button type="submit">Submit</button>
         </form>
-
-        
-        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html">
-            <button id="add" onclick="add()">Add Ingredient</button>
-            <input type="hidden" name="name" value="value" />
-        </form>
-        
-
-
 
         <script src="js/index.js"></script>
     </body>

@@ -65,24 +65,16 @@ function displayIngredient(event) {
     console.log('display');
     event.preventDefault(); // Had to Google how to stop page from refreshing on each submission and use of event, wouldn't work otherwise
 
+    // Get recipe name
     const recipeName = document.getElementById('recipeName');
     const recipeNameText = recipeName.value;
 
     const list = document.getElementById('ingredientList');
     const items = list.getElementsByTagName('ul');
 
-    const ingredientText = ingredientInput.value;
-
-    const selectedIngredients = [];
-    for (let item of items) {
-        const checkbox = item.getElementsByTagName('input')[0];
-        if (checkbox.checked) {
-            selectedIngredients.push(item.getElementsByTagName('span')[0].textContent);
-        }
-    }
-
-    const displayArea = document.getElementById('selectedIngredients');
-    displayArea.textContent = `${recipeNameText}\n${selectedIngredients.join('\n')}`;
+    // Determine what boxes are selected
+    // Display Recipe name AND only selected boxes
+    
 }
 
 

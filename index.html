@@ -6,14 +6,14 @@
         <h1>Collecting Thanksgiving Recipes</h1>
 
         <!--Text input-->
-        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html" method="post">
-            <p>Recipe Name:
-                <input type="text" name="recipe" size="15"
-                maxlength="30" />
-            </p>
-        </form>
+        <form id="recipeNameId">
+            <label for="recipeName">Recipe Name:</label>
+            <input type="text" id="recipeName" name="recipeName">
+        </form><br>
 
-        <form id="ingredientForm" onclick="addIngredient()"> <!--onsubmit to prevent submitting too early-->
+        
+
+        <form id="ingredientForm"> 
             <!--Ingredient-->
             <label for="ingredientInput">Ingredient:</label>
             <input type="text" id="ingredientInput" name="ingredientInput">
@@ -38,19 +38,17 @@
                 <option value="lbs">lbs</option> <!--Pounds-->
             </select>
             <!--Submit Ingredient-->
-            <button id="submit">Add Ingredient</button>
-        </form>
-    
-        <!-- Display ingredient list with checkboxes -->
-        
+            <button id="submit" onclick="addIngredient(event)">Add Ingredient</button>
+        </form>        
 
         <!--Checklist of Ingredients-->
-        <form action="file:///Users/peterhewson/Desktop/Computer%20Science/JS%20Exciting%20Parts/collecting-recipes/index.html">
-            <p id="ingredientList">Checklist of Ingredients</p>
-            
+        <p id="ingredientList">Checklist of Ingredients</p>
+        <button id="deleteSelected" onclick="deleteIngredient(event)">Remove Selected</button>
+        <button id="displayIngredients" onclick="displayIngredient(event)">Display Ingredients</button>
 
-            <button type="submit">Submit</button>
-        </form>
+        <!--Display Ingredients-->
+        <h2>Selected Ingredients</h2> 
+        <ul id="selectedIngredients"></ul>
 
         <script src="js/index.js"></script>
     </body>

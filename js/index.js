@@ -86,9 +86,3 @@ function displayIngredient(event) {
         displayArea.appendChild(listItem);
     }
 }
-
-
-
-
-
-
